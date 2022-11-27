@@ -11,16 +11,40 @@
   </head>
   <body>
     <script>
-      document.body.addEventListener('click', addElements);
-
+      document.querySelector('body').addEventListener('click', addElements);
       function addElements() {
-        for (let i = 0; i < 5; i++) {
-          let text = document.createElement('article');
-          text.classList.add('message');
-          text.innerText = 'Sample text';
-          document.body.appendChild(text);
-        }
+        let textDOM = document.createElement('article');
+        textDOM.innerHTML = 'Sample Text';
+        textDOM.classList.add('message');
+        let textDOM2 = document.createElement('article');
+        textDOM2.innerHTML = 'Sample Text';     
+        textDOM2.classList.add('message');
+        let textDOM3 = document.createElement('article');
+        textDOM3.innerHTML = 'Sample Text';
+        textDOM3.classList.add('message');
+        let textDOM4 = document.createElement('article');
+        textDOM4.innerHTML = 'Sample Text';
+        textDOM4.classList.add('message');
+        let textDOM5 = document.createElement('article');
+        textDOM5.innerHTML = 'Sample Text';
+        textDOM5.classList.add('message');
+        document.querySelector('.main').appendChild(textDOM);
+        document.querySelector('.main').appendChild(textDOM2);
+        document.querySelector('.main').appendChild(textDOM3);
+        document.querySelector('.main').appendChild(textDOM4);
+        document.querySelector('.main').appendChild(textDOM5);
       }
+
+      // document.body.addEventListener('click', addElements);
+
+      // function addElements() {
+      //   for (let i = 0; i < 5; i++) {
+      //     let text = document.createElement('article');
+      //     text.classList.add('message');
+      //     text.innerText = 'Sample text';
+      //     document.body.appendChild(text);
+      //   }
+      // }
     </script>
   </body>
 </html>
