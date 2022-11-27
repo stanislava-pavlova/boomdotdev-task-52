@@ -10,30 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <div class="main">
+      <div class="emoji mb-6">💣🤯💥</div>
+      <button class="button">Boom?</button>
+    </div>
+
     <script>
-      document.querySelector('body').addEventListener('click', addElements);
-      function addElements() {
-        let textDOM = document.createElement('article');
-        textDOM.innerHTML = 'Sample Text';
-        textDOM.classList.add('message');
-        let textDOM2 = document.createElement('article');
-        textDOM2.innerHTML = 'Sample Text';     
-        textDOM2.classList.add('message');
-        let textDOM3 = document.createElement('article');
-        textDOM3.innerHTML = 'Sample Text';
-        textDOM3.classList.add('message');
-        let textDOM4 = document.createElement('article');
-        textDOM4.innerHTML = 'Sample Text';
-        textDOM4.classList.add('message');
-        let textDOM5 = document.createElement('article');
-        textDOM5.innerHTML = 'Sample Text';
-        textDOM5.classList.add('message');
-        document.querySelector('.main').appendChild(textDOM);
-        document.querySelector('.main').appendChild(textDOM2);
-        document.querySelector('.main').appendChild(textDOM3);
-        document.querySelector('.main').appendChild(textDOM4);
-        document.querySelector('.main').appendChild(textDOM5);
-      }
+      document.body.addEventListener('click', () => {
+        let addElement = () => {
+          for (let i = 0; i < 5; i++) {
+            const txt = document.createElement('article');
+            txt.classList.add('message');
+            txt.innerHTML = 'Content';
+
+            document.body.appendChild(txt);
+          }
+        };
+        addElement();
+      });
 
       // document.body.addEventListener('click', addElements);
 
